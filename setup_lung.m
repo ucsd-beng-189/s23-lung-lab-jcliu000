@@ -57,14 +57,18 @@ VAbar=VAtotal/n
 %expected perfusion per alveolus: 
 Qbar=Qtotal/n 
 
+% initialize two random variables that range from 0 to infty and decays exponentially
 a1=-log(rand(n,1));
 a2=-log(rand(n,1));
-av=(a1+a2)/2;        
+av=(a1+a2)/2;        % random variable that is the average of the previous two
+% beta term controls how related VA and Q are
+    % if beta = 0, then the ratio VA/Q is always the same
+    % if beta = 1, then VA and Q vary independently from each other
 VA=VAbar*(a1*beta+av*(1-beta));
 Q = Qbar*(a2*beta+av*(1-beta));
 r=VA./Q;
 figure(1)
-plot(Q,VA,'.')
+plot(Q,VA,'.')      % plots the correlation between VA and Q
 
 %find actual values of 
 %VAtotal, Qtotal, VAbar, and Qbar:
