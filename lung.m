@@ -40,10 +40,12 @@ xlabel('Elevation (m)')
 ylabel('Pressure (mmHg)')
 title('Partial Pressures of Oxygen vs. Elevation')
 legend('Mean Alveolar','Mean Arterial','Venous')
+subtitle('Elevation Adaptation')
 
 figure(5)   % plot concentrations
 plot(elevation,Concentrations_track)
 xlabel('Elevation (m)')
 ylabel('Concentration of Oxygen (mol/L)')
 title('Concentrations of Oxygen vs. Elevation')
+subtitle('Elevation Adaptation')
 legend('Mean Alveolar','Mean Arterial','Venous')
