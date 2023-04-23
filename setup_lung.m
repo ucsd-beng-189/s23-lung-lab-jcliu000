@@ -2,7 +2,7 @@
 %heterogeneity parameter (0<=beta<=1):
 %beta=0 for homogenous lung
 %beta=1 for no ventilation/perfusion correlation
-beta=0.5
+%beta=0.5
 %
 %number of iterations used in bisection:
 maxcount=20
@@ -20,7 +20,7 @@ cref=0.2/(22.4*(310/273))
 %
 %blood oxygen concentration
 %at full hemoglobin saturation: 
-cstar=1.5*cref  % adjusted for elevation adaptation
+cstar=cref
 %cstar=4*(concentration of hemoglobin 
 %in blood expressed in moles/liter)
 %
