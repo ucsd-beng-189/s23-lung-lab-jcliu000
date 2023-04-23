@@ -15,7 +15,7 @@ Pv_track = zeros(1,20);     % save venous partial pressures
 cv_track = zeros(1,20);     % save venous concentrations
 
 
-for i = 1:20
+for i = 1:20                % loop for multipliers for cI
     cI = cref*cI_frac_range(i);
     setup_lung
     cvsolve
@@ -31,14 +31,14 @@ end
 Pressures_track = [PA_track; Pa_track; Pv_track];
 Concentrations_track = [cA_track; ca_track; cv_track];
 
-figure(4)
+figure(4)   % plot pressures
 plot(cref*cI_frac_range,Pressures_track)
 xlabel('Concentration of Oxygen in Inspired Air (mol/L)')
 ylabel('Pressure (mmHg)')
 title('Mean Pressures vs. Concentration of Oxygen in Inspired Air')
 legend('Mean Alveolar','Mean Arterial','Venous')
 
-figure(5)
+figure(5)   % plot concentrations
 plot(cref*cI_frac_range,Concentrations_track)
 xlabel('Concentration of Oxygen in Inspired Air (mol/L)')
 ylabel('Concentration of Oxygen (mol/L)')
