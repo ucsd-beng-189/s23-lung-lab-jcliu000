@@ -1,8 +1,8 @@
 %filename: cvsolve.m
-if(Mdiff(0,r)>0)
+%if(Mdiff(0,r)>0)
   %stop program and issue error message:
-  error('M is too large')
-end
+%  error('M is too large')
+%end
 
 %initialize:
 cv_lower=0;            %lower limit of interval

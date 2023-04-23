@@ -25,7 +25,7 @@ cstar=cref
 %in blood expressed in moles/liter)
 %
 %rate of oxygen consumption (moles/minute):
-M=0.25*cref*5.6
+%M=0.25*cref*5.6
 %
 %oxygen partial pressure 
 %at which hemoglobin is half-saturated:
