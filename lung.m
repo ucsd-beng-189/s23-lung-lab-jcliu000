@@ -31,16 +31,19 @@ end
 Pressures_track = [PA_track; Pa_track; Pv_track];
 Concentrations_track = [cA_track; ca_track; cv_track];
 
+% calculate elevation
+elevation = -log(cI_frac_range)/(29/6.022/10^26)/9.8*1.38*10^-23*310;
+
 figure(4)   % plot pressures
-plot(cref*cI_frac_range,Pressures_track)
-xlabel('Concentration of Oxygen in Inspired Air (mol/L)')
+plot(elevation,Pressures_track)
+xlabel('Elevation (m)')
 ylabel('Pressure (mmHg)')
-title('Mean Pressures vs. Concentration of Oxygen in Inspired Air')
+title('Partial Pressures of Oxygen vs. Elevation')
 legend('Mean Alveolar','Mean Arterial','Venous')
 
 figure(5)   % plot concentrations
-plot(cref*cI_frac_range,Concentrations_track)
-xlabel('Concentration of Oxygen in Inspired Air (mol/L)')
+plot(elevation,Concentrations_track)
+xlabel('Elevation (m)')
 ylabel('Concentration of Oxygen (mol/L)')
-title('Oxygen Concentration in Body vs. in Inspired Air')
+title('Concentrations of Oxygen vs. Elevation')
 legend('Mean Alveolar','Mean Arterial','Venous')
