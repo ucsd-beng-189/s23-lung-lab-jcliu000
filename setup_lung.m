@@ -16,11 +16,11 @@ cref=0.2/(22.4*(310/273))
 %in air at sea level at body temperature
 %
 %oxygen concentration in the inspired air:
-%cI=cref
+cI=cref
 %
 %blood oxygen concentration
 %at full hemoglobin saturation: 
-cstar=cref
+%cstar=cref
 %cstar=4*(concentration of hemoglobin 
 %in blood expressed in moles/liter)
 %
