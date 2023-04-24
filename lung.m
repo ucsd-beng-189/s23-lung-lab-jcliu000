@@ -81,8 +81,8 @@ for j = 1:11                % loop over beta
     
     figure(6)   % plot pressures
     subplot(3,4,j)
-    subtitle("beta = " + beta)
     plot(cref*cstar_frac_range,Pressures_track)
+    subtitle("beta = " + beta)
     legend('Mean Alveolar','Mean Arterial','Venous')
     
     figure(7)   % plot concentrations
